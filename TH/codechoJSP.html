@@ -1,0 +1,44 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.rog/TR/html4/loose.dtd">
+<html>
+<head>
+	<title>Murach's Java Servlet and JSP</title> 
+</head>
+<body>
+	<% 
+		//get parameters from request
+		String firstName = request.getParameter("firstName");
+		String lastName = request.getParameter("lastName");
+		String emailAddress = request.getParameter("emailAddress");
+	%>
+<h1>Cám ơn bạn đã tham gia danh sách email của chúng tôi</h1>     
+<p>Đây là nơi bạn nhập thông tin</p>     
+<table cellspacing="5" cellpadding="5" border="1"> 
+	<tr>
+		<td align="right">Frist name:</td> 
+		<td><%=firstName%></td>
+	</tr>
+	<tr>
+		<td align="right">Last name:</td>
+		<td><%=lastName%></td>
+	</tr>
+	<tr>
+		<td align="right">Email Address:</td>
+		<td><%=emailAddress%></td>
+	</tr>
+</table>
+<p>Để nhập một email khác, nhấn quay lại<br>
+trong trình duyệt của bạn hoắc nút<br>
+quay lại được hiển thị bên dưới</p>
+<form action="join_email_lít.html"method="get"><!--  -->
+	<input type="submit" value="Return">
+</form>
+</body>
+</html>
+ <!-- Title Tiêu đề trang -->
+<!-- H1 là dòng chữ lớn có thể h2 h3 h4 tùy ý -->
+<!-- thẻ p là thẻ văn bản bình thường  -->
+<!--table là thẻ đẻ tạo bảng, cellspacing là thiết lập khoảng cách nằm giữa 2 đường viền, cellpadding là thiết lập khoảng cách vùng đệm bên trong các ô, boder là thiết lập độ dày viền  -->
+<!-- thẻ tr là xác định một hàng bên trong bảng -->
+<!--thẻ td là xác định một ô ở bên trong bảng, align căn lề văn bản trong ô -->
+<!-- thẻ br để xuống hàng  -->
+<!-- Form action (Thiết lập địa chỉ URL ) method ( Thiết lập HTTP thường có giá trị là get(URL) or post(gửi ND của request đến sever và là ẩn với người dùng) sài post sẽ an toàn hơn get ), type là loại vd như file thì sẽ là chọn tệp... -->
